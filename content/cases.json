@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "title": "礁溪溫泉民宿",
+    "type": "溫泉民宿",
+    "location": "宜蘭縣礁溪鄉",
+    "rooms": 8,
+    "date": "2024年12月",
+    "rating": 5,
+    "services": [
+      "房務清潔",
+      "備品補充",
+      "入住前檢查",
+      "退房後整備"
+    ],
+    "testimonial": "服務非常專業，清潔品質很好，客人反應都很滿意。",
+    "client": "礁溪溫泉民宿 王老闆",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 2,
+    "title": "羅東市區民宿",
+    "type": "市區民宿",
+    "location": "宜蘭縣羅東鎮",
+    "rooms": 6,
+    "date": "2024年11月",
+    "rating": 5,
+    "services": [
+      "房務清潔",
+      "備品補充",
+      "月度督導"
+    ],
+    "testimonial": "準時可靠，清潔品質穩定，是值得信賴的合作夥伴。",
+    "client": "羅東市區民宿 李經理",
+    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=300&fit=crop"
+  },
+  {
+    "id": 3,
+    "title": "頭城海景民宿",
+    "type": "海景民宿",
+    "location": "宜蘭縣頭城鎮",
+    "rooms": 4,
+    "date": "2024年10月",
+    "rating": 5,
+    "services": [
+      "房務清潔",
+      "備品補充",
+      "入住前檢查"
+    ],
+    "testimonial": "很注重細節，連海風造成的特殊清潔需求都能處理得很好。",
+    "client": "頭城海景民宿 張老闆",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&h=300&fit=crop"
+  }
+]

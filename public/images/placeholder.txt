@@ -1,0 +1,11 @@
+這個目錄用於存放網站圖片
+
+目前需要的圖片：
+- case-before-1.jpg (成功案例前後對比圖)
+- case-after-1.jpg
+- case-before-2.jpg
+- case-after-2.jpg
+- case-before-3.jpg
+- case-after-3.jpg
+
+請將實際的圖片檔案放在這裡，或者使用線上圖片服務如 Unsplash 的圖片。

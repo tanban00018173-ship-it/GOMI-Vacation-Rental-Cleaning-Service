@@ -1,0 +1,92 @@
+{
+  "brand": {
+    "name": "狗米整理",
+    "company": "瓏會算有限公司",
+    "tagline": "民宿整理交給我們，你專心接待下一位旅客。",
+    "description": "專業民宿清潔服務，標準化SOP、照片驗收、每月督導抽查，讓您的民宿保持最佳狀態。",
+    "address": "宜蘭縣宜蘭市陽明三路65號",
+    "phone": "0963350089",
+    "contact": "陳經理",
+    "line": "https://lin.ee/E6WgviI",
+    "googleForm": "https://docs.google.com/forms/d/e/1FAIpQLSdi_EFL2uYap7FsUclIR5P5icay6m6LXtPyNWnauzmcg4ymqQ/viewform?usp=header",
+    "recruitmentForm": "https://docs.google.com/forms/d/e/1FAIpQLSdi_EFL2uYap7FsUclIR5P5icay6m6LXtPyNWnauzmcg4ymqQ/viewform?usp=header"
+  },
+  "pricing": {
+    "singleRoom": {
+      "min": 450,
+      "max": 650,
+      "currency": "NT$",
+      "note": "實際依勘查結果調整"
+    },
+    "wholeHouse": [
+      {
+        "size": "≤60坪",
+        "price": 3000
+      },
+      {
+        "size": "60～100坪",
+        "price": 4500
+      }
+    ],
+    "monthly": {
+      "description": "單月 20 天為上限，超過部分依單次包棟價格計算"
+    }
+  },
+  "services": {
+    "areas": [
+      {
+        "name": "室內房間",
+        "description": "房間本體＋衛浴（地面、桌面、鏡面、馬桶、乾濕分離）"
+      },
+      {
+        "name": "公共區域",
+        "description": "大門口至房間必經動線、走廊等通道"
+      }
+    ],
+    "exclusions": [
+      "不處理垃圾或載運廢棄物"
+    ]
+  },
+  "process": [
+    {
+      "step": 1,
+      "title": "預約諮詢",
+      "description": "透過LINE或Google表單預約服務"
+    },
+    {
+      "step": 2,
+      "title": "現場勘查",
+      "description": "確認備品補充方式、清潔重點與出入動線"
+    },
+    {
+      "step": 3,
+      "title": "報價與合約",
+      "description": "提供詳細報價，不含垃圾載運"
+    },
+    {
+      "step": 4,
+      "title": "排程服務",
+      "description": "安排清潔時間與人員"
+    },
+    {
+      "step": 5,
+      "title": "標準清潔",
+      "description": "依SOP進行專業清潔"
+    },
+    {
+      "step": 6,
+      "title": "照片驗收",
+      "description": "提供清潔前後對比照片"
+    },
+    {
+      "step": 7,
+      "title": "每月督導",
+      "description": "定期抽查確保服務品質"
+    }
+  ],
+  "legal": {
+    "compliance": "本服務依法合規，不涉及垃圾載運業務",
+    "privacy": "我們重視您的隱私，所有資料僅用於服務提供",
+    "terms": "服務條款以現場勘查後簽訂之合約為準"
+  }
+}
