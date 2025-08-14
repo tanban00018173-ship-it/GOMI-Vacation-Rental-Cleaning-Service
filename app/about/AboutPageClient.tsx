@@ -360,7 +360,7 @@ export default function AboutPageClient({ config }: AboutPageClientProps) {
               聯絡我們，讓我們為您的民宿創造完美的住宿環境
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary">
+                             <Button asChild size="lg" variant="brandSecondary">
                 <a href={config.brand.googleForm} target="_blank" rel="noopener noreferrer">
                   立即預約服務
                   <ArrowRight className="ml-2 h-5 w-5" />

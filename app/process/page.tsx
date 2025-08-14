@@ -222,7 +222,7 @@ export default async function ProcessPage() {
             立即聯絡我們，讓我們為您安排現場勘查和報價
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary">
+                         <Button asChild size="lg" variant="brandSecondary">
               <a href={config.brand.googleForm} target="_blank" rel="noopener noreferrer">
                 填寫預約表單
                 <ArrowRight className="ml-2 h-5 w-5" />

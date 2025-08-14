@@ -273,7 +273,7 @@ export default function FAQPageClient({ config, faqs }: FAQPageClientProps) {
               如果以上問題無法解答您的疑問，歡迎直接聯絡我們
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="secondary">
+                             <Button asChild size="lg" variant="brandSecondary">
                 <a href={config.brand.googleForm} target="_blank" rel="noopener noreferrer">
                   填寫預約表單
                   <ArrowRight className="ml-2 h-5 w-5" />

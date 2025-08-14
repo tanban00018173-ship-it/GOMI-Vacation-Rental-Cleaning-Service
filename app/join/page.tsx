@@ -201,7 +201,7 @@ export default function JoinPage() {
             成為狗米整理團隊的一員，一起為宜蘭地區的民宿提供優質服務
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary">
+                                    <Button asChild size="lg" variant="brandSecondary">
               <a href="https://line.me/ti/g2/DTASF-rDddw60tkuv_rhhKbTC6oPSl-Elp6OuA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 加入 LINE 社群

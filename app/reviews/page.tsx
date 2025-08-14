@@ -151,7 +151,7 @@ export default async function ReviewsPage() {
                     
                     <div className="space-y-2">
                       <h4 className="font-semibold text-brand-navy text-sm">服務類型：</h4>
-                      <p className="text-sm text-gray-600">{review.serviceType}</p>
+                      <p className="text-sm text-gray-600">{review.service}</p>
                     </div>
 
                     <div className="space-y-2">
@@ -285,7 +285,7 @@ export default async function ReviewsPage() {
             立即聯絡我們，讓我們為您提供同樣優質的服務體驗
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary">
+                         <Button asChild size="lg" variant="brandSecondary">
               <a href={config.brand.googleForm} target="_blank" rel="noopener noreferrer">
                 填寫預約表單
                 <ArrowRight className="ml-2 h-5 w-5" />
