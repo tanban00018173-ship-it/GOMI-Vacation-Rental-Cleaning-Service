@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import { CheckCircle, Circle } from 'lucide-react'
 
 interface ProcessStep {
@@ -21,12 +18,8 @@ export default function ProcessStepper({ steps }: ProcessStepperProps) {
       
       <div className="space-y-8">
         {steps.map((step, index) => (
-          <motion.div
+          <div
             key={step.step}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
             className="relative flex items-start space-x-6"
           >
             {/* Step indicator */}
@@ -41,7 +34,7 @@ export default function ProcessStepper({ steps }: ProcessStepperProps) {
               <h3 className="text-xl font-semibold text-brand-navy mb-2">{step.title}</h3>
               <p className="text-gray-600 leading-relaxed">{step.description}</p>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
