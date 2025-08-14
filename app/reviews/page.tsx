@@ -39,13 +39,13 @@ export default async function ReviewsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="btn-primary">
-              <a href={config.googleForm} target="_blank" rel="noopener noreferrer">
+              <a href={config.brand.googleForm} target="_blank" rel="noopener noreferrer">
                 立即預約服務
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="btn-outline">
-              <a href={config.line} target="_blank" rel="noopener noreferrer">
+              <a href={config.brand.line} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 LINE 諮詢
               </a>
@@ -286,13 +286,13 @@ export default async function ReviewsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" variant="secondary">
-              <a href={config.googleForm} target="_blank" rel="noopener noreferrer">
+              <a href={config.brand.googleForm} target="_blank" rel="noopener noreferrer">
                 填寫預約表單
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-white text-brand-navy hover:bg-gray-100">
-              <a href={config.line} target="_blank" rel="noopener noreferrer">
+              <a href={config.brand.line} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 LINE 諮詢
               </a>

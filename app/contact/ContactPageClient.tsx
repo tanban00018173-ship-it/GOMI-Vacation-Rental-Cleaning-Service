@@ -76,7 +76,7 @@ export default function ContactPageClient({ config, faqs }: ContactPageClientPro
                     填寫詳細的服務需求，我們將根據您的民宿狀況提供客製化報價
                   </p>
                   <Button asChild className="btn-primary w-full">
-                    <a href={config.googleForm} target="_blank" rel="noopener noreferrer">
+                    <a href={config.brand.googleForm} target="_blank" rel="noopener noreferrer">
                       填寫預約表單
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </a>
@@ -104,7 +104,7 @@ export default function ContactPageClient({ config, faqs }: ContactPageClientPro
                     加入我們的 LINE 官方帳號，享受即時諮詢和快速回覆服務
                   </p>
                   <Button asChild className="btn-secondary w-full">
-                    <a href={config.line} target="_blank" rel="noopener noreferrer">
+                    <a href={config.brand.line} target="_blank" rel="noopener noreferrer">
                       加入 LINE
                       <MessageCircle className="ml-2 h-4 w-4" />
                     </a>
@@ -194,7 +194,7 @@ export default function ContactPageClient({ config, faqs }: ContactPageClientPro
                 <h3 className="text-xl font-semibold text-brand-navy mb-2">LINE 官方帳號</h3>
                 <p className="text-gray-600">即時諮詢服務</p>
                 <Button asChild variant="outline" size="sm" className="mt-3">
-                  <a href={config.line} target="_blank" rel="noopener noreferrer">
+                  <a href={config.brand.line} target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-4 w-4" />
                     加入 LINE
                   </a>

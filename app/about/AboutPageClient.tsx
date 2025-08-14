@@ -39,13 +39,13 @@ export default function AboutPageClient({ config }: AboutPageClientProps) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="btn-primary">
-                <a href={config.googleForm} target="_blank" rel="noopener noreferrer">
+                <a href={config.brand.googleForm} target="_blank" rel="noopener noreferrer">
                   立即預約服務
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="btn-outline">
-                <a href={config.line} target="_blank" rel="noopener noreferrer">
+                <a href={config.brand.line} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   聯絡我們
                 </a>
@@ -361,13 +361,13 @@ export default function AboutPageClient({ config }: AboutPageClientProps) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
-                <a href={config.googleForm} target="_blank" rel="noopener noreferrer">
+                <a href={config.brand.googleForm} target="_blank" rel="noopener noreferrer">
                   立即預約服務
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-white text-brand-navy hover:bg-gray-100">
-                <a href={config.line} target="_blank" rel="noopener noreferrer">
+                <a href={config.brand.line} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   LINE 諮詢
                 </a>
@@ -427,7 +427,7 @@ export default function AboutPageClient({ config }: AboutPageClientProps) {
                               <h3 className="text-xl font-semibold text-brand-navy mb-2">LINE 官方帳號</h3>
                               <p className="text-gray-600">即時諮詢服務</p>
                               <Button asChild variant="outline" size="sm" className="mt-3">
-                                <a href={config.line} target="_blank" rel="noopener noreferrer">
+                                <a href={config.brand.line} target="_blank" rel="noopener noreferrer">
                                   <MessageCircle className="mr-2 h-4 w-4" />
                                   加入 LINE
                                 </a>
