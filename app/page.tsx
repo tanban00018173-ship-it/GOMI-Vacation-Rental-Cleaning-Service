@@ -138,17 +138,31 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {cases.map((caseItem) => (
-              <Card key={caseItem.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                <div className="aspect-video bg-gray-200 relative">
+            {cases.map((caseItem, index) => (
+              <Card key={caseItem.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-0 shadow-lg group">
+                <div className="aspect-video bg-gradient-to-br from-brand-light to-white relative overflow-hidden">
                   <img
-                    src={caseItem.afterImage || "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
+                    src={
+                      caseItem.afterImage || 
+                      (index === 0 
+                        ? "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        : index === 1
+                        ? "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        : "https://images.unsplash.com/photo-1521783988139-89397d761dce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      )
+                    }
                     alt={caseItem.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      // 如果圖片載入失敗，使用預設的漸層背景
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.parentElement!.className = 'aspect-video bg-gradient-to-br from-brand-teal/20 to-brand-navy/20 relative overflow-hidden';
+                    }}
                   />
-                  <div className="absolute top-4 right-4 bg-brand-teal text-white px-4 py-2 rounded-full text-sm font-medium">
+                  <div className="absolute top-4 right-4 bg-brand-teal text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
                     {caseItem.type}
                   </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <CardHeader className="pb-4">
                   <CardTitle className="text-xl">{caseItem.title}</CardTitle>
