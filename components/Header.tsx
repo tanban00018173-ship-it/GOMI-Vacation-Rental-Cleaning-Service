@@ -24,11 +24,11 @@ export default function Header() {
   const config = getConfig()
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white shadow-md sticky top-0 z-50">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div className="flex w-full items-center justify-between border-b border-gray-200 py-6">
+        <div className="flex w-full items-center justify-between py-4">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3">
+            <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
               <Image
                 src="/LOGO.png"
                 alt="狗米整理 Logo"
@@ -44,12 +44,12 @@ export default function Header() {
           </div>
           
           {/* Desktop navigation */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-8">
+          <div className="hidden lg:flex lg:items-center lg:space-x-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-gray-700 hover:text-brand-navy transition-colors"
+                className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-brand-navy hover:bg-brand-light rounded-lg transition-all duration-200"
               >
                 {item.name}
               </Link>
@@ -57,10 +57,11 @@ export default function Header() {
           </div>
 
           {/* Contact buttons */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-4">
+          <div className="hidden lg:flex lg:items-center lg:space-x-3">
             <Button
               variant="outline"
               size="sm"
+              className="border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white transition-all duration-200"
               asChild
             >
               <Link href={`tel:${config.brand.phone}`}>
@@ -69,7 +70,7 @@ export default function Header() {
               </Link>
             </Button>
             <Button
-              variant="primary"
+              className="bg-brand-teal hover:bg-brand-teal/90 text-white transition-all duration-200"
               size="sm"
               asChild
             >
@@ -86,6 +87,7 @@ export default function Header() {
               variant="ghost"
               size="sm"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="hover:bg-gray-100"
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -98,22 +100,22 @@ export default function Header() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+          <div className="lg:hidden border-t border-gray-200">
+            <div className="space-y-1 px-2 pb-4 pt-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-navy hover:bg-gray-50 rounded-md"
+                  className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-brand-navy hover:bg-brand-light rounded-lg transition-all duration-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 space-y-2">
+              <div className="pt-4 space-y-3 px-2">
                 <Button
                   variant="outline"
-                  className="w-full"
+                  className="w-full border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white"
                   asChild
                 >
                   <Link href={`tel:${config.brand.phone}`}>
@@ -122,8 +124,7 @@ export default function Header() {
                   </Link>
                 </Button>
                 <Button
-                  variant="primary"
-                  className="w-full"
+                  className="w-full bg-brand-teal hover:bg-brand-teal/90 text-white"
                   asChild
                 >
                   <Link href={config.brand.line}>

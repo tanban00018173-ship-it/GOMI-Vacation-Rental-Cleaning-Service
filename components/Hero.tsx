@@ -7,18 +7,18 @@ export default function Hero() {
 
   return (
     <section className="relative bg-gradient-to-br from-brand-light to-white overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy leading-tight">
+          <div className="space-y-10">
+            <div className="space-y-6">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-brand-navy leading-tight">
                 民宿整理交給專業
                 <br />
                 <span className="text-brand-teal">讓房客每次打開門都說 WOW</span>
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
                 標準化清潔SOP × 照片驗收 × 每月督導抽查
                 <br />
                 從頭到尾不處理垃圾或載運廢棄物（依法合規）
@@ -26,38 +26,38 @@ export default function Hero() {
             </div>
 
             {/* Features */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-brand-teal" />
-                <span className="text-gray-700">標準化清潔流程，品質一致</span>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-4">
+                <CheckCircle className="h-6 w-6 text-brand-teal flex-shrink-0" />
+                <span className="text-lg text-gray-700">標準化清潔流程，品質一致</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-brand-teal" />
-                <span className="text-gray-700">照片驗收制度，透明化服務</span>
+              <div className="flex items-center space-x-4">
+                <CheckCircle className="h-6 w-6 text-brand-teal flex-shrink-0" />
+                <span className="text-lg text-gray-700">照片驗收制度，透明化服務</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-brand-teal" />
-                <span className="text-gray-700">每月督導抽查，持續改善</span>
+              <div className="flex items-center space-x-4">
+                <CheckCircle className="h-6 w-6 text-brand-teal flex-shrink-0" />
+                <span className="text-lg text-gray-700">每月督導抽查，持續改善</span>
               </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-6 pt-4">
               <Button
                 size="lg"
-                className="bg-brand-navy hover:bg-brand-navy/90 text-white px-8 py-4 text-lg font-semibold"
+                className="bg-brand-navy hover:bg-brand-navy/90 text-white px-10 py-6 text-xl font-semibold"
                 asChild
               >
                 <a href={config.brand.googleForm} target="_blank" rel="noopener noreferrer">
                   立即預約服務
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-6 w-6" />
                 </a>
               </Button>
               
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white px-8 py-4 text-lg font-semibold"
+                className="border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white px-10 py-6 text-xl font-semibold"
                 asChild
               >
                 <a href={config.brand.line} target="_blank" rel="noopener noreferrer">
@@ -68,7 +68,7 @@ export default function Hero() {
 
             {/* Trust indicators */}
             <div className="pt-8 border-t border-gray-200">
-              <p className="text-sm text-gray-500">
+              <p className="text-base text-gray-500">
                 <strong>服務區域：</strong>宜蘭全區 • <strong>服務時間：</strong>週一至週日 8:00-18:00
               </p>
             </div>
@@ -76,26 +76,26 @@ export default function Hero() {
 
           {/* Image */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="專業民宿清潔服務"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[600px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               
               {/* Floating stats */}
-              <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+              <div className="absolute bottom-8 left-8 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-brand-navy">500+</div>
-                  <div className="text-sm text-gray-600">服務民宿</div>
+                  <div className="text-3xl font-bold text-brand-navy">500+</div>
+                  <div className="text-base text-gray-600">服務民宿</div>
                 </div>
               </div>
               
-              <div className="absolute top-6 right-6 bg-brand-teal/95 backdrop-blur-sm rounded-xl p-4 shadow-lg text-white">
+              <div className="absolute top-8 right-8 bg-brand-teal/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg text-white">
                 <div className="text-center">
-                  <div className="text-2xl font-bold">5.0</div>
-                  <div className="text-sm">客戶評分</div>
+                  <div className="text-3xl font-bold">5.0</div>
+                  <div className="text-base">客戶評分</div>
                 </div>
               </div>
             </div>

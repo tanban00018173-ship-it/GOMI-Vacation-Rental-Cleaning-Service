@@ -81,18 +81,18 @@ export default function HomePage() {
       <Hero />
 
       {/* Services Section */}
-      <section className="section-padding bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-navy mb-6">
               為什麼選擇狗米整理？
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               我們提供專業的民宿清潔服務，讓您專心接待下一位旅客
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
             {services.map((service, index) => (
               <ServiceCard
                 key={service.title}
@@ -108,54 +108,54 @@ export default function HomePage() {
       </section>
 
       {/* Process Section */}
-      <section className="section-padding bg-brand-light">
+      <section className="py-20 bg-brand-light">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-navy mb-6">
               服務流程
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               從預約到完成，每個步驟都透明化，讓您安心託付
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <ProcessStepper steps={config.process} />
           </div>
         </div>
       </section>
 
       {/* Cases Section */}
-      <section className="section-padding bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-navy mb-6">
               成功案例
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               看看我們如何幫助宜蘭地區的民宿主提升服務品質
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {cases.map((caseItem) => (
-              <Card key={caseItem.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card key={caseItem.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
                 <div className="aspect-video bg-gray-200 relative">
                   <img
-                    src={caseItem.afterImage}
+                    src={caseItem.afterImage || "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"}
                     alt={caseItem.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute top-4 right-4 bg-brand-teal text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute top-4 right-4 bg-brand-teal text-white px-4 py-2 rounded-full text-sm font-medium">
                     {caseItem.type}
                   </div>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-lg">{caseItem.title}</CardTitle>
-                  <CardDescription>{caseItem.location}</CardDescription>
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-xl">{caseItem.title}</CardTitle>
+                  <CardDescription className="text-base">{caseItem.location}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
+                <CardContent className="pt-0">
+                  <div className="space-y-4">
                     <div className="flex justify-between text-sm">
                       <span className="text-gray-600">房間數：</span>
                       <span className="font-medium">{caseItem.rooms}間</span>
@@ -168,9 +168,9 @@ export default function HomePage() {
                       <span className="text-gray-600">清潔時間：</span>
                       <span className="font-medium">{caseItem.duration}</span>
                     </div>
-                    <div className="pt-3 border-t">
-                      <p className="text-sm text-gray-600 italic">"{caseItem.testimonial}"</p>
-                      <p className="text-sm font-medium text-brand-navy mt-2">— {caseItem.client}</p>
+                    <div className="pt-4 border-t border-gray-100">
+                      <p className="text-sm text-gray-600 italic leading-relaxed">"{caseItem.testimonial}"</p>
+                      <p className="text-sm font-medium text-brand-navy mt-3">— {caseItem.client}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -178,11 +178,15 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button asChild>
+          <div className="text-center mt-16">
+            <Button 
+              size="lg"
+              className="bg-brand-navy hover:bg-brand-navy/90 text-white px-8 py-4 text-lg font-semibold"
+              asChild
+            >
               <a href="/cases">
                 查看更多案例
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
           </div>
@@ -190,40 +194,40 @@ export default function HomePage() {
       </section>
 
       {/* Reviews Section */}
-      <section className="section-padding bg-brand-light">
+      <section className="py-20 bg-brand-light">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-navy mb-6">
               客戶評價
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               聽聽宜蘭地區民宿主對我們的真實評價
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {reviews.map((review) => (
-              <Card key={review.id} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
+              <Card key={review.id} className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+                <CardHeader className="pb-4">
                   <div className="flex items-center justify-between">
                     <div>
-                      <CardTitle className="text-lg">{review.name}</CardTitle>
-                      <CardDescription>{review.location} • {review.service}</CardDescription>
+                      <CardTitle className="text-xl">{review.name}</CardTitle>
+                      <CardDescription className="text-base">{review.location} • {review.service}</CardDescription>
                     </div>
                     <div className="flex items-center space-x-1">
                       {[...Array(review.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700 mb-4">"{review.content}"</p>
+                <CardContent className="pt-0">
+                  <p className="text-gray-700 mb-6 leading-relaxed">"{review.content}"</p>
                   <div className="flex flex-wrap gap-2">
                     {review.keywords.map((keyword) => (
                       <span
                         key={keyword}
-                        className="px-2 py-1 bg-brand-teal/10 text-brand-teal text-xs rounded-full"
+                        className="px-3 py-1 bg-brand-teal/10 text-brand-teal text-sm rounded-full"
                       >
                         {keyword}
                       </span>
@@ -234,11 +238,15 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button asChild>
+          <div className="text-center mt-16">
+            <Button 
+              size="lg"
+              className="bg-brand-navy hover:bg-brand-navy/90 text-white px-8 py-4 text-lg font-semibold"
+              asChild
+            >
               <a href="/reviews">
                 查看更多評價
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
           </div>
@@ -246,31 +254,31 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-brand-navy text-white">
+      <section className="py-20 bg-brand-navy text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
             準備好提升您的民宿品質了嗎？
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
             立即預約現場勘查，我們將為您提供專業的清潔服務方案
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
             <Button
               size="lg"
-              className="bg-brand-teal hover:bg-brand-teal/90 text-white px-8 py-4 text-lg font-semibold"
+              className="bg-brand-teal hover:bg-brand-teal/90 text-white px-10 py-6 text-xl font-semibold"
               asChild
             >
               <a href={config.brand.googleForm} target="_blank" rel="noopener noreferrer">
                 立即預約服務
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-6 w-6" />
               </a>
             </Button>
             
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-brand-navy px-8 py-4 text-lg font-semibold"
+              className="border-2 border-white text-white hover:bg-white hover:text-brand-navy px-10 py-6 text-xl font-semibold"
               asChild
             >
               <a href={config.brand.line} target="_blank" rel="noopener noreferrer">
@@ -279,17 +287,17 @@ export default function HomePage() {
             </Button>
           </div>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm">
-            <div className="flex items-center space-x-2">
-              <Phone className="h-4 w-4" />
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-12 text-base">
+            <div className="flex items-center space-x-3">
+              <Phone className="h-5 w-5" />
               <span>{config.brand.phone}</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="h-4 w-4" />
+            <div className="flex items-center space-x-3">
+              <MapPin className="h-5 w-5" />
               <span>服務宜蘭全區</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <Clock className="h-4 w-4" />
+            <div className="flex items-center space-x-3">
+              <Clock className="h-5 w-5" />
               <span>週一至週日 8:00-18:00</span>
             </div>
           </div>
