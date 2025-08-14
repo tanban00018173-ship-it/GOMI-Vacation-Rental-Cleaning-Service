@@ -45,7 +45,6 @@
       ]
     }
   ],
-  "compress": true,
   "functions": {
     "app/**/*.tsx": {
       "maxDuration": 10
