@@ -120,7 +120,7 @@ yarn build
 #### 1. Google 預約表單
 - **檔案：** `content/config.json`
 - **欄位：** `googleForm`
-- **目前連結：** `https://docs.google.com/forms/d/e/1FAIpQLSdi_EFL2uYap7FsUclIR5PZicay6m6LXtPyNWnauzmcg4ymqQ/viewform?usp=header`
+- **目前連結：** `https://docs.google.com/forms/d/e/1FAIpQLSdi_EFL2uYap7FsUclIR5P5icay6m6LXtPyNWnauzmcg4ymqQ/viewform?usp=header`
 
 #### 2. LINE 官方帳號
 - **檔案：** `content/config.json`
@@ -130,7 +130,7 @@ yarn build
 #### 3. 人才招募表單
 - **檔案：** `content/config.json`
 - **欄位：** `recruitmentForm`
-- **目前連結：** `https://forms.gle/your-recruitment-form-id`
+- **目前連結：** `https://docs.google.com/forms/d/e/1FAIpQLSdi_EFL2uYap7FsUclIR5P5icay6m6LXtPyNWnauzmcg4ymqQ/viewform?usp=header`
 
 ### 修改步驟
 
