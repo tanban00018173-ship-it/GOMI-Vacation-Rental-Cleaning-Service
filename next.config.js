@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 移除 output: 'export' 以支援 Vercel 部署
-  basePath: process.env.NODE_ENV === 'production' ? '/GOMI-Vacation-Rental-Cleaning-Service' : '',
+  // 移除 basePath 以確保在 Vercel 上正常工作
   trailingSlash: true,
   images: {
     unoptimized: true,
